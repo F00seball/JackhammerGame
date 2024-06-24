@@ -1,0 +1,83 @@
+.game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .game-area {
+    position: relative;
+    height: 400px;
+    border: 2px solid #333;
+    margin-bottom: 20px;
+  }
+  
+  .wall {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .brick {
+    background-color: #8B4513;
+    border: 1px solid #333;
+    box-sizing: border-box;
+  }
+  
+  .brick.broken {
+    background-color: #D3D3D3;
+  }
+  
+  .jackhammer {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    cursor: pointer;
+  }
+  
+  .jackhammer.hammering {
+    animation: hammer 0.1s infinite;
+  }
+  
+  @keyframes hammer {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    50% { transform: translateX(-50%) rotate(10deg); }
+    100% { transform: translateX(-50%) rotate(0deg); }
+  }
+  
+  .start-button, .restart-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .timer {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .stat {
+    font-size: 18px;
+    font-weight: bold;
+  }
